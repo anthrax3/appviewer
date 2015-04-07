@@ -26,19 +26,29 @@
       td {
       margin-top: 10px;
       }
+      div#mainData {
+      font-size:50%;
+      }
     </style>
 
   </head>
   <body>
     
-    Row number: <input id="whichrow"></input>
+    Row number: <input id="whichrow" value="1"></input>
     <button onClick="updateData()">Show</button>
+    <hr/>
+    <button onClick="next(-1)">&laquo; Previous application</button>
+    <button onClick="next(1)">Next application &raquo;</button>
+
     <table id="currentRow">
     </table>
 
+    <button onClick="next(-1)">&laquo; Previous application</button>
+    <button onClick="next(1)">Next application &raquo;</button>
+    <hr/>
     <table>
       <tr>
-	<td><div id="mainData" style="width:300px; height:200px; overflow:scroll;"></div></td>
+	<td><div id="mainData" style="width:600px; height:500px; overflow:scroll;"></div></td>
 	<td style="width:300px;">
 	  <p>&laquo; Go to the responses, press Ctrl-A, and copy the data in here.</p>
 	  <!--<p>If you've already made comments, paste that column there &raquo;.</p>

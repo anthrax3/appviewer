@@ -25,7 +25,7 @@ function updateData() {
     currentSelected = parseInt(currentSelected)
 
     if (currentSelected === NaN) {
-	alert("Please enter a row number.");
+	alert("Please enter a valid row number.");
     } else {
 	var titles = myData[0];
 	var row = myData[currentSelected];
@@ -35,4 +35,15 @@ function updateData() {
 	    $("table#currentRow").append("<tr><td><b>"+element+"</b></td><td class=\""+element+"\">"+row[index]+"</td></tr>");
 	});
     }
+}
+
+function next(increment) {
+    currentSelected = $("input#whichrow").val()
+    currentSelected = parseInt(currentSelected)
+    if (currentSelected === NaN) {
+	alert("Please enter a valid row number.");
+    } else {
+	$("input#whichrow").val(""+(currentSelected+increment));
+    }
+    updateData();
 }
