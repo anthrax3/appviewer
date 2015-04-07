@@ -7,72 +7,43 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://handsontable.com/dist/handsontable.full.js"></script>
+    <link rel="stylesheet" media="screen" href="http://handsontable.com/dist/handsontable.full.css">
     <script src="main.js"></script>
-    
+
+    <style>
+      body {
+      color: black;
+      background-color: white;
+      }
+      td.Name {
+      color: black;
+      background-color: black;
+      }
+      td.High.School {
+      color: black;
+      background-color: black;
+      }
+      td {
+      margin-top: 10px;
+      }
+    </style>
 
   </head>
   <body>
-
-    <button onClick="buttonTest()">clicky</button>
-
-    <table>
-      <tr>
-	<td><b>Timestamp</b></td>
-	<td><span id="Timestamp"></span></td>
-      </tr>
-      <tr>
-	<td><b>Name</b></td>
-	<td><span id="Name"></span></td>
-      </tr>
-      <tr>
-	<td><b>Email</b></td>
-	<td><span id="Email"></span></td>
-      </tr>
-      <tr>
-	<td><b>Birthday</b></td>
-	<td><span id="Birthday"></span></td>
-      </tr>
-      <tr>
-	<td><b>Current grade</b></td>
-	<td><span id="Current grade"></span></td>
-      </tr>
-      <tr>
-	<td><b>High School</b></td>
-	<td><span id="High School"></span></td>
-      </tr>
-      <tr>
-	<td><b>GPA</b></td>
-	<td><span id="GPA"></span></td>
-      </tr>
-      <tr>
-	<td><b>Awards + Accomplishments</b></td>
-	<td><span id="Awards + Accomplishments"></span></td>
-      </tr>
-      <tr>
-	<td><b>Dreams + Aspirations</b></td>
-	<td><span id="Dreams + Aspirations"></span></td>
-      </tr>
-      <tr>
-	<td><b>Major projects</b></td>
-	<td><span id="Major projects"></span></td>
-      </tr>
-      <tr>
-	<td><b>Classes</b></td>
-	<td><span id="Classes"></span></td>
-      </tr>
-      <tr>
-	<td><b>Other activities</b></td>
-	<td><span id="Other activities"></span></td>
-      </tr>
+    
+    Row number: <input id="whichrow"></input>
+    <button onClick="updateData()">Show</button>
+    <table id="currentRow">
     </table>
 
     <table>
       <tr>
 	<td><div id="mainData" style="width:300px; height:200px; overflow:scroll;"></div></td>
-	<td><p>Go to the responses, press Ctrl-A, and copy the data in here &laquo;.</p>
-	  <p>If you've already made comments, paste that column there &raquo;.</p>
-	  <p>When you're done, copy out the column corresponding to your responses.</p></td>
-	<td><div id="yours" style="width:300px; height:200px; overflow:scroll;"></td>
+	<td style="width:300px;">
+	  <p>&laquo; Go to the responses, press Ctrl-A, and copy the data in here.</p>
+	  <!--<p>If you've already made comments, paste that column there &raquo;.</p>
+	  <p>When you're done, copy out the column corresponding to your responses.</p>-->
+	</td>
       </tr>
     </table>
   </body>
