@@ -3,7 +3,7 @@ var currentSelected;
 
 $(document).ready(function() {
     myData = [
-	["test"],
+	["PASTE DATA HERE"],
     ];
     var table = new Handsontable(
 	document.getElementById('mainData'), {
